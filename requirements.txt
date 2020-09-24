@@ -1,0 +1,4 @@
+torch
+torchvision
+transformers==2.9.0
+adapter-transformers
