@@ -5,9 +5,9 @@ license: MIT
 
 # Sentiment Analysis Adapter
 A sentiment-analysis adapter trained on the Yahoo Movie Review dataset by Bandai Namco Research Inc.
-Find [here](README_ja.md) for a quickstart guidance in Japanese.
+Find here for a quickstart guidance in Japanese.
 
-[日本語README]()
+[日本語README](README_ja.md)
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ This paper [[Parameter-Efﬁcient Transfer Learning for NLP](https://arxiv.org/a
 
 This repository is provide a sentiment-analysis adapter to classify POSITIVE and NEGATIVE comments in Japanese, which is trained on the Yahoo Movie Review dataset for 10 epochs and achived 89.1% accuracy.
 
-Thi repository is also to show how to train and use this adapter based on the great documenation by [HuggingFace's Transformers](https://huggingface.co/transformers/index.html)
+This repository is also to show how to train and use this adapter based on the great documenation by [HuggingFace's Transformers](https://huggingface.co/transformers/index.html)
 and [Adapter-Hub](https://adapterhub.ml/). Please find details in [examples](https://github.com/BandaiNamcoResearchInc/sentiment-analysis-adapter/tree/master/examples).
 
 ## Usage

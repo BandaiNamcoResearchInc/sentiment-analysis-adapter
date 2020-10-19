@@ -6,7 +6,9 @@ license: MIT
 # 感情分析用アダプター
 
 感情分析用アダプターは、株式会社バンダイナムコ研究所がYahoo!映画のユーザレビューデータセットを用いて学習したアダプターです。
-英語でのクイックスタートガイドは[こちら](README.md)をご覧ください。
+英語でのクイックスタートガイドはこちらをご覧ください。
+
+[英語README](README.md)
 
 ## 目次
 
@@ -26,7 +28,11 @@ ICML2019の論文[[Parameter-Efﬁcient Transfer Learning for NLP](https://arxiv
 元のネットワークのパラメータは固定しているため、高い効率でパラメータを共有することができます。
 GLUEタスクでは、タスクあたり3.6%のパラメータを追加するだけで、フルでファインチューニングしたモデルと同程度の性能を達成しました。
 
-本リポジトリでは、[HuggingFace's Transformers](https://huggingface.co/transformers/index.html)や[Adapter-Hub](https://adapterhub.ml/)の素晴らしいドキュメントを基に、自身のデータセットで学習した日本語用のアダプターをどのように学習して利用するかを紹介します。
+本リポジトリでは、日本語のポジティブコメントとネガティブコメントを分類するための感情分析用アダプターを提供します。
+このアダプターは、Yahoo!映画のユーザレビューデータセットを利用して10エポック学習したもので、精度は89.1%でした。
+
+また、本リポジトリでは、[HuggingFace's Transformers](https://huggingface.co/transformers/index.html)や[Adapter-Hub](https://adapterhub.ml/)の素晴らしいドキュメントを基に、このアダプターの利用方法と学習方法を紹介します。
+詳細は、[examples](https://github.com/BandaiNamcoResearchInc/sentiment-analysis-adapter/tree/master/examples)をご覧ください。
 
 
 ## 利用方法
@@ -59,9 +65,16 @@ def predict(sentence):
 
   return 'positive' if result == 1 else 'negative'
 
-assert predict("すばらしいですね") == "positive" 
+assert predict("すばらしいですね") == "positive"
 assert predict("全然面白くない") == "negative"
 ```
+
+### Google Colabでの学習デモ:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github//BandaiNamcoResearchInc/sentiment-analysis-adapter/blob/master/examples/adapter-train-demo.ipynb)
+
+### Google Colabでの推論デモ:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github//BandaiNamcoResearchInc/sentiment-analysis-adapter/blob/master/examples/adapter-inference-demo.ipynb)
+
 
 ## ライセンス
 Copyright (c) 2020 BANDAI NAMCO Research Inc.
