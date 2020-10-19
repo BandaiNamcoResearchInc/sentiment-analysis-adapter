@@ -7,6 +7,8 @@ license: MIT
 A sentiment-analysis adapter trained on the Yahoo Movie Review dataset by Bandai Namco Research Inc.
 Find [here](README_ja.md) for a quickstart guidance in Japanese.
 
+[日本語README]()
+
 ## Table of Contents
 
 1. [Introduction](#Introduction)
@@ -18,9 +20,10 @@ In this era of large pre-trained models, Fine-tune is a perfectly normal operati
 
 This paper [[Parameter-Efﬁcient Transfer Learning for NLP](https://arxiv.org/abs/1902.00751)] from ICML 2019 proposedd transfer with adapter modules. Adapter modules yielded a compact and extensible model by adding only a few trainable parameters per task, and new tasks could be added without revisiting previous ones. The parameters of the original network remain fixed, yielding a high degree of parameter sharing. On GLUE task, adapter achieved equivalent performance to full fine-tuning model by adding only 3.6% parameters per task.
 
-This repository is to show how to train and use an adapter in Japanese trained on own dataset,
-based on the great documenation by [HuggingFace's Transformers](https://huggingface.co/transformers/index.html)
-and [Adapter-Hub](https://adapterhub.ml/)
+This repository is provide a sentiment-analysis adapter to classify POSITIVE and NEGATIVE comments in Japanese, which is trained on the Yahoo Movie Review dataset for 10 epochs and achived 89.1% accuracy.
+
+Thi repository is also to show how to train and use this adapter based on the great documenation by [HuggingFace's Transformers](https://huggingface.co/transformers/index.html)
+and [Adapter-Hub](https://adapterhub.ml/). Please find details in [examples](https://github.com/BandaiNamcoResearchInc/sentiment-analysis-adapter/tree/master/examples).
 
 ## Usage
 
@@ -51,9 +54,15 @@ def predict(sentence):
 
   return 'positive' if result == 1 else 'negative'
 
-assert predict("すばらしいですね") == "positive" 
+assert predict("すばらしいですね") == "positive"
 assert predict("全然面白くない") == "negative"
 ```
+
+### Training demo on Google Colab:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github//BandaiNamcoResearchInc/sentiment-analysis-adapter/blob/master/examples/adapter-train-demo.ipynb)
+
+### Inferencing demo on Google Colab:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github//BandaiNamcoResearchInc/sentiment-analysis-adapter/blob/master/examples/adapter-inference-demo.ipynb)
 
 
 ## License
