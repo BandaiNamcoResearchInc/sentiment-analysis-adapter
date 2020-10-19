@@ -5,7 +5,7 @@ license: MIT
 
 # Sentiment Analysis Adapter
 A sentiment-analysis adapter trained on the Yahoo Movie Review dataset by Bandai Namco Research Inc.
-Find here for a quickstart guidance in Japanese.
+Find [here](README_ja.md) for a quickstart guidance in Japanese.
 
 ## Table of Contents
 
