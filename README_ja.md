@@ -29,7 +29,7 @@ ICML2019の論文[[Parameter-Efﬁcient Transfer Learning for NLP](https://arxiv
 GLUEタスクでは、タスクあたり3.6%のパラメータを追加するだけで、フルでファインチューニングしたモデルと同程度の性能を達成しました。
 
 本リポジトリでは、日本語のポジティブコメントとネガティブコメントを分類するための感情分析用アダプターを提供します。
-このアダプターは、Yahoo!映画のユーザレビューデータセットを利用して10エポック学習したもので、精度は89.1%でした。
+このアダプターは、Yahoo!映画のユーザレビューデータセット12500件を利用して10エポック学習したもので、精度は89.1%でした。
 
 また、本リポジトリでは、[HuggingFace's Transformers](https://huggingface.co/transformers/index.html)や[Adapter-Hub](https://adapterhub.ml/)の素晴らしいドキュメントを基に、このアダプターの利用方法と学習方法を紹介します。
 詳細は、[examples](https://github.com/BandaiNamcoResearchInc/sentiment-analysis-adapter/tree/master/examples)をご覧ください。
